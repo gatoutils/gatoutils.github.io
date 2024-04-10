@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your PC ran into a problem</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        /* Para evitar barras de desplazamiento */
+      }
+
+      img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        /* Para que la imagen cubra toda la pantalla */
+        position: absolute;
+        /* Posición absoluta para ocupar toda la pantalla */
+        top: 0;
+        left: 0;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var elem = document.documentElement;
+        var requestFullScreen = elem.requestFullscreen || elem.mozRequestFullScreen || elem.webkitRequestFullscreen || elem.msRequestFullscreen;
+        if (requestFullScreen) {
+          requestFullScreen.call(elem);
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <img src="https://www.teknofilo.com/wp-content/uploads/2021/07/windows11bsod.0-1280x853.jpg" alt="Imagen en pantalla completa">
+  </body>
+</html>
